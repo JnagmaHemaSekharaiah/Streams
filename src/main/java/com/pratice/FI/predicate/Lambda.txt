@@ -1,0 +1,208 @@
+1.8 onwards java is called as functional programming
+
+Functional Programming
+->functions can exist outside of the class.
+->functions are stored in the reference variable.
+->functions can be passed as parameter to other methods.
+->functions can be returned form methods.
+
+Lambda Expression in java is a short way to write the
+anonymous function ==> 1.no name 2.no modifier 3.no return type
+
+public void m1()              () ->{print("HI")}
+{
+print("HI")             ==>
+}
+
+public void add(int a, int b)  ===> (a,b) -> {print(a+b);}
+{
+print(a+" "+b);
+}
+
+
+when single we writing only one line  "{" is not need
+
+return is NOT allowed in a single-expression lambda. {{  A ref = () -> 10 + 20; correct ✅
+
+when we are passing single param no need "(",")"
+
+Lambda is a implementation
+
+
+Lamda is used to call Functional interface methods
+==================================================
+
+Functional Interface :
+-------------------------
+An interface has only one abstract method is called as the FI
+Can have multiple default static methods
+comparator,ruunable are FI
+1.8 Lambda expression and method refe are used represent the instance of function interface.
+A function interface can extend anther fun interface
+
+Java have serval predeifid functions Fi's
+
+
+1.predicate 2.consume 3.supplier 4.Function
+
+
+===============================================================
+
+Predicate
+=========
+1.check the condition return true or false
+2.will take ony one input
+
+@FunctionalInterface
+Interface Predicate(T x)
+{
+boolean Test(T x)
+
+default add()
+{
+
+}
+
+default or()
+{
+
+}
+
+}
+
+Example :
+                String A = "Hello";
+		String B = "World";
+		Predicate<Integer> obj1 = x -> A.charAt(x) =='o';
+		Predicate<Integer> obj2 = y -> B.charAt(y) =='d';
+
+		Predicate<Integer> obj3 = obj1.and(obj2); // equal to [obj1.add(3) && obj1.add(3)]
+
+		System.out.println ( obj3.test(3)  );
+
+Supplier:
+---------
+@FunctionalInterface
+interface Supplier<T> {
+T get();
+}
+it will return value does not take any input
+
+Consumer :-
+---------
+Interface Consumer<T>
+{
+accept(T);
+}
+it will take input and not give any output
+
+Function
+---------
+
+Function<R,T>
+{
+R apply(T t);
+}
+
+It takes input and return output.
+=======================================
+Predicate   -> return 0 or 1 & one input
+BIpredicate -> return 0 or 1 & Two input
+consumer    -> no return     & one input
+BiConsumer  ->               & Two input
+supplier    -> return val    & no input
+Function    -> return v      & take input
+BiFunction  -> return one output & 2 inputs
+=======================================
+
+Method Reference
+=================
+these are shorthand notation for lambda expression.
+works only for the lambda expressions
+syntax: className::methodName or obj::methodName
+
+
+static method ref                                        || className::staticMethodName
+instance method for particular object                    || refName::methodName
+instance method of arbitrary object of a particular type || ClassName :: methodName
+constructor method ref                                   || syntax : ClassName::new
+
+orbitertay object(Un bound) : the object will not be fixed in advance. Instead each obj will be provided at runtime.
+Bounded Object : Bound method reference means is the object  is already known and fixed at the time of reference created.
+
+
+
+Strems:
+=======
+
+types :-
+
+1.Sequential  2.parallel  3.primitive streams 4.Infinite Streams
+
+Operations:-
+===========
+
+Source Operations
+
+Intermediate Operations
+
+Terminal Operations 1. Filtering 2. Mapping
+
+list.stream()              // SOURCE
+    .filter(n -> n > 2)    // INTERMEDIATE
+    .map(n -> n * 2)       // INTERMEDIATE
+    .forEach(System.out::println); // TERMINAL
+
+===================
+Source operations
+===================
+list.stream()
+Arrays.stream()
+Stream.of()
+Stream.empty()
+Stream.iterate()
+
+
+=======================
+Intermediate Operations
+=======================
+filter()
+map()
+sorted()
+
+slicing
+---------
+distinct()
+limit()
+skip()
+
+
+========================
+Terminal Operations
+========================
+forEach()
+collect()
+count()
+findFirst()
+anyMatch()
+allMatch()
+noneMatch()
+
+
+Lazy : noting will execute until terminal operation is called
+
+
+this is called contravariance in the 'Generics'
+-------------------------------------------------
+Predicate<? super T> ==> Accept T or Any Subclass of T
+
+
+Streams are collections
+not store the data
+process the data
+
+
+
+
+
+
