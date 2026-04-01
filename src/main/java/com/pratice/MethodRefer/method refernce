@@ -1,0 +1,14 @@
+Method Reference
+=================
+these are shorthand notation for lambda expression.
+works only for the lambda expressions
+syntax: className::methodName or obj::methodName
+
+
+static method ref                                        || className::staticMethodName
+instance method for particular object                    || refName::methodName
+instance method of arbitrary object of a particular type || ClassName :: methodName
+constructor method ref                                   || syntax : ClassName::new
+
+orbitertay object(Un bound) : the object will not be fixed in advance. Instead each obj will be provided at runtime.
+Bounded Object : Bound method reference means is the object  is already known and fixed at the time of reference created.

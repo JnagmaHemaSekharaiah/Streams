@@ -1,0 +1,207 @@
+Stream is a interface used to filter the data
+collection and array can be the source for the Streams
+streams are nothing but bunch of operations performed on the data
+
+Stream<T> Interface — All Important Methods
+
+=================================
+1️⃣ Stream Creation / Source Methods
+=================================
+Used to create streams :-
+------------------------
+stream() (from Collection)
+parallelStream() (from Collection)
+Stream.of(...)
+Stream.ofNullable(T)
+Stream.empty()
+Stream.generate(Supplier<T>)
+Stream.iterate(...)
+Stream.concat(Stream a, Stream b)
+
+
+=======================
+2️⃣ Intermediate Operations
+=======================
+👉 Lazy | Return Stream
+🔹 Transformation
+
+map(Function)
+flatMap(Function)
+mapToInt(ToIntFunction)
+mapToLong(ToLongFunction)
+mapToDouble(ToDoubleFunction)
+
+🔹 Filtering
+filter(Predicate)
+distinct()
+
+🔹 Sorting
+sorted()
+sorted(Comparator)
+
+🔹 Limiting / Slicing
+
+limit(long)
+skip(long)
+takeWhile(Predicate) (Java 9+)
+dropWhile(Predicate) (Java 9+)
+
+🔹 Debugging / Observation
+
+peek(Consumer)
+
+=====================
+3️⃣ Terminal Operations
+====================
+
+👉 Trigger execution | End stream
+
+🔹 Iteration
+---------------
+forEach(Consumer)
+forEachOrdered(Consumer)
+
+🔹 Reduction
+---------------
+reduce(BinaryOperator)
+reduce(identity, BinaryOperator)
+reduce(identity, BiFunction, BinaryOperator)
+
+🔹 Collection
+---------------
+collect(Collector)
+toList() (Java 16+)
+
+🔹 Matching
+---------------
+anyMatch(Predicate)
+allMatch(Predicate)
+noneMatch(Predicate)
+
+🔹 Finding
+---------------
+findFirst()
+findAny()
+
+🔹 Counting
+--------------
+count()
+
+🔹 Min / Max
+----------------
+min(Comparator)
+max(Comparator)
+
+===================================
+4️⃣ Conversion / Special Terminal Methods
+===================================
+toArray()
+toArray(IntFunction)
+iterator()
+spliterator()
+
+=====================================
+5️⃣ Stream State / Configuration Methods
+=====================================
+sequential()
+parallel()
+unordered()
+onClose(Runnable)
+close()
+isParallel()
+
+================================
+6️⃣ Primitive Stream Variants (Related)
+================================
+(Not in Stream<T>, but important)
+IntStream
+LongStream
+DoubleStream
+They have similar methods plus:
+sum()
+average()
+
+===========================================
+7️⃣ Stream Method Classification (Interview Favorite)
+===========================================
+Category   	Examples
+Source	        of, iterate, generate
+Intermediate	    map, filter, sorted
+Terminal	        forEach, collect, reduce
+Short-circuit	    findFirst, anyMatch, limit
+Stateful	        distinct, sorted
+Stateless	        map, filter
+
+
+🔑 VERY IMPORTANT RULES
+
+1.Stream can be used only once
+---------------------------
+
+2.Intermediate ops are lazy
+----------------------------
+Intermediate operations executed only once after terminatory operations are called.
+
+3.Terminal opearotion is mandatory
+
+4.Stream does not store data
+
+5.Original collection is unchanged
+
+6.Stream pipe line structure
+----------------------------
+Source → Intermediate operations → Terminal operation
+
+7.Stream can not be reused after terminal operations performed.
+-------------------------------------------------------------
+Stream<Integer> s = list.stream();
+s.forEach(System.out::println);
+s.forEach(System.out::println); // ❌ IllegalStateException
+
+Intermediate (return Streams)
+----------------------------
+Stream<T> filter(Predicate<? super T>)
+map()
+sorted()
+distinct()
+peek()
+
+Terminal operation (return result)
+------------------
+forEach()
+collect()
+count()
+findFirst()
+reduce()
+
+Important interview concept: stateless vs stateful operations
+Primitive streams for performance ⚡
+Short-circuit operations
+
+map()
+-----
+filter() and map() are basically used together
+
+Syntax:
+
+Stream<T> filter(Predicate<? super T> predicate )
+
+<R> Stream<R> map(Function<? extends T,? extends R> function)
+
+distinct()
+----------
+Stream<T> distinct()
+
+remove duplicate elements form stream
+
+distinct() uses:
+
+hashCode() + equals()
+
+
+peek()
+-------
+
+
+
+
