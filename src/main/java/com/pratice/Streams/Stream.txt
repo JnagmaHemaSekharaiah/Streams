@@ -166,14 +166,6 @@ sorted()
 distinct()
 peek()
 
-Terminal operation (return result)
-------------------
-forEach()
-collect()
-count()
-findFirst()
-reduce()
-
 Important interview concept: stateless vs stateful operations
 Primitive streams for performance ⚡
 Short-circuit operations
@@ -201,6 +193,74 @@ hashCode() + equals()
 
 peek()
 -------
+
+for debugging or inspecting elements
+<Stream R> peek(Consumer <? super R> action)
+
+
+Terminal operation (return result)
+------------------
+forEach(Consumer<? super T> action)
+collect()
+count()
+findFirst()
+reduce()
+
+
+==========================================
+<R,A> R collect(Collector<? super T,A,R> )
+===========================================
+collect() is a terminal operation that convert stream into final result by accmulating its elements into a container.
+
+
+Streams are lazy and do not stroe the data
+so after processing we need to collect() to
+
+Store results (List,Set,Map)
+Transform the data strcture
+Aggragte functions
+
+
+=========
+Collector
+===========
+<R,A> R collect(Collector <?super T,A,R> action)
+
+T -> type of elemnets in stream.
+A -> mutable accululation type (Intermediate container)
+R -> Final result type retunred.
+
+Accumulation = the process of gradually building the result step by step while iterating through the streams elements.
+
+Create a Container A
+Add elements one by one into it
+convert into final result (R)
+
+A Collector has the 4 parts
+
+Supplier
+Accumlator
+Combiner
+Finisher
+
+List<Integer> result = stream.collect(
+    ArrayList::new,      // supplier
+    List::add,           // accumulator
+    List::addAll         // combiner
+);
+
+
+List<Integer> list = stream.collect(Collectors.toList());
+
+Set<Integer> set = stream.collect(Collectors.toSet());
+
+Map<Integer, String> map = stream.collect(  Collectors.toMap(x -> x, x -> "Value" + x) );
+
+String result = stream.collect(Collectors.joining(", "));
+
+long count = stream.collect(Collectors.counting());
+
+Map<Integer, List<Integer>> grouped = stream.collect(Collectors.groupingBy(x -> x % 2));
 
 
 
