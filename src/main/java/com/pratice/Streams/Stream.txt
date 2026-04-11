@@ -207,6 +207,7 @@ findFirst()
 reduce()
 
 
+
 ==========================================
 <R,A> R collect(Collector<? super T,A,R> )
 ===========================================
@@ -262,6 +263,21 @@ long count = stream.collect(Collectors.counting());
 
 Map<Integer, List<Integer>> grouped = stream.collect(Collectors.groupingBy(x -> x % 2));
 
+
+=================================================
+Optional<T> reduce(BinaryOperator<T> accumultor)
+=================================================
+combine the elements into single result.
+used for sum product etc.
+
+A BinaryOperator<T> is funcional interface:
+that takes two input with same type
+return the result of the same type
+Example :
+(T a, T b) -> T
+
+syntax:
+Optional<T> reduce(BinaryOperator<T> accumulator)
 
 
 

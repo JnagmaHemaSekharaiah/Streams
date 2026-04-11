@@ -1,0 +1,43 @@
+----
+of
+----
+Use case : When 100 % sure no nullPointerException
+
+throws exception if null
+
+Optional<String> op = OPtional.of("String");
+
+-----------
+ofNullable
+----------
+use case : When value may be null
+
+return non-null if it contain the value
+returns empty Optional if null
+
+Optional<String> op = Optional.ofNullable(null);
+
+
+Where to Use
+------------
+APi responses
+DB Values
+user input
+
+------
+empty
+-----
+
+Use case : When you want to explicitly return no value
+It Always returns empty Optional
+
+Optional<String> op = Optional.empty();
+
+Uses
+------
+It will avoid null pointer exception
+
+-------------
+ifPresent
+
+op.ifPresent((x) -> println(x));
