@@ -11,7 +11,7 @@ public class Demo {
         Set<Integer> set = new HashSet<Integer>();
         for (int i = 0 ; i < nums.length ; i++ )
         {
-              if(set.size()==k && set.contains(nums[i]))
+              if(set.size()<=k && set.contains(nums[i]))
               {
                   return  true;
               }
@@ -27,10 +27,10 @@ public class Demo {
 
     public static void main(String[] args)
     {
-      int arr[] ={1,2,3,4,5,2};
+      int arr[] ={1, 2, 3, 1};
       int k=3;
       //System.out.println( usingMaps(arr,k));
-      System.out.println( Demo.slidingWindow(arr,3));
+      System.out.println( Demo.slidingWindow(arr,k));
     }
 
     public static boolean usingMaps(int[] nums, int k) {
