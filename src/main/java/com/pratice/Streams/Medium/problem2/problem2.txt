@@ -1,0 +1,7 @@
+Remove Duplicates + Sort
+
+Problem:
+From a list of integers, return a sorted list of unique elements.
+
+Input: [4, 2, 5, 2, 3, 4]
+Output: [2, 3, 4, 5]

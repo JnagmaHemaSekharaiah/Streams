@@ -1,0 +1,7 @@
+String Filtering + Transformation
+
+Problem:
+From a list of strings, return uppercase strings whose length > 3.
+
+Input: ["java", "go", "python", "js"]
+Output: ["JAVA", "PYTHON"]

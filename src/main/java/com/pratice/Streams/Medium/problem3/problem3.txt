@@ -1,0 +1,7 @@
+Find Top K Elements
+
+Problem:
+Return top 3 highest numbers from list.
+
+Input: [5, 1, 9, 3, 7]
+Output: [9, 7, 5]

@@ -1,0 +1,1 @@
+Given a list of integers, return a list of squares of even numbers only. Input: [1, 2, 3, 4, 5] Output: [4, 16]
