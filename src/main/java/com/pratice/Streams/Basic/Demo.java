@@ -9,6 +9,7 @@ public class Demo
     {
        List<String> names = List.of("Ram","Sekhar","Ranga");
        Stream<String> stream = names.stream();
+
        stream.forEach( (String x) ->
        {
            System.out.println(x);

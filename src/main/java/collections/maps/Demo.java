@@ -3,7 +3,8 @@ package collections.maps;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Demo {
+public class Demo
+{
 
     public static void helo()
     {
@@ -13,7 +14,6 @@ public class Demo {
         System.out.println(map.get(2));
         System.out.println(map.containsKey(2));
         System.out.println(map.containsValue(1));
-
     }
 
 

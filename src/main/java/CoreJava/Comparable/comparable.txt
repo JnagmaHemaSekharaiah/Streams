@@ -1,0 +1,22 @@
+Comparable is the java interface used to define the natural ordering of objets
+
+Comparable is an interface that allow objects to compare itself with another objecrs
+with same return type
+
+public interface Comparable<T> {
+    int compareTo(T o);
+}
+
+< 0  → this < other
+= 0  → this == other
+> 0  → this > other
+
+should use inside the class
+
+class Student implements Comparable<Student> {
+    int age;
+
+    public int compareTo(Student s) {
+        return Integer.compare(this.age, s.age); // ascending
+    }
+}

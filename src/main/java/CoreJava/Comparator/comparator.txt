@@ -1,0 +1,127 @@
+Comparator is functional Interface
+
+-> It is used to define custom ordering logic for objects
+-> Idea
+
+java sorts using natural orders (like number assending order,or sort based on custom fileds)
+
+When need to desending order
+sort based on Custom fileds (eg.age,salary)
+we can use comparator
+
+Syntax
+-------
+interface Comparator<T>
+{
+   int compare(T o1, T o2);
+}
+
+How it works:
+Returns negative → o1 comes before o2
+Returns 0 → equal
+Returns positive → o1 comes after o2
+
+
+
+Comprator can used outside the class
+------------------------------------
+Comparator<Student> comp = (s1, s2) ->
+    Integer.compare(s2.age, s1.age); // descending
+
+
+======================
+Multiple Sorting Logic
+=======================
+Comparable ❌
+Only one sorting rule possible
+
+Comparator ✅
+Multiple sorting rules possible
+
+Comparable  → defines natural/default ordering
+Comparator  → defines custom/dynamic ordering
+
+When to Use What
+=================
+✔ Use Comparable
+----------------
+When class has natural order
+Example: Integer, String
+
+✔ Use Comparator
+-------------------
+When you need custom sorting
+Multiple sorting conditions
+External sorting logic
+
+
+Key Patterns You Should Master
+===============================
+// Basic
+(a, b) -> a - b
+
+// Reverse
+Comparator.reverseOrder()
+
+// Single field
+Comparator.comparing(...)
+
+// Multiple fields
+.thenComparing(...)
+
+// Reverse field
+.comparing(...).reversed()
+
+// Numeric safe compare
+Integer.compare(a, b)
+
+
+============================================
+Comparator<Student> comp = (a,b) -> {
+  Integer key1 = a.marks;
+  Integer key2 = b.marks;
+  return key1.compareTo(k2);
+}
+
+list.sort(comp)
+Internall it does
+
+compare(a,b)
+compare(b,c)
+compare(a,c)
+........
+
+
+key1.compareTo(k2)
+
+
+Integer.compareTo()
+
+Condition	Return    Value
+key1 < key2	negative  (-1)
+key1 == key2	       0
+key1 > key2	positive  (+1)
+
+==============================================
+
+Custom Comparator
+-----------------
+It means defining the own sorting logic based on the condition
+
+Comparator<Integer> comp = (x, y) -> {
+    int a = x % 10;
+    int b = y % 10;
+    return a - b;
+};
+
+Rule 1 : Must return ONLY 3 types of values
+
+negative → a < b
+zero     → a == b
+positive → a > b
+
+
+
+
+
+

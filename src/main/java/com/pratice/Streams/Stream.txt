@@ -165,10 +165,19 @@ map()
 sorted()
 distinct()
 peek()
+list()
 
 Important interview concept: stateless vs stateful operations
 Primitive streams for performance ⚡
 Short-circuit operations
+
+
+
+sorted()
+---------
+sorted() accepts a Comparator
+
+Stream<T> sorted(Comparator<? super T> comparator)
 
 map()
 -----
@@ -198,6 +207,13 @@ for debugging or inspecting elements
 <Stream R> peek(Consumer <? super R> action)
 
 
+limt()
+-------
+
+Syntax :: stream.limit(long maxSize)
+Returns → a new stream with at most maxSize elements
+
+
 Terminal operation (return result)
 ------------------
 forEach(Consumer<? super T> action)
@@ -205,13 +221,14 @@ collect()
 count()
 findFirst()
 reduce()
-
+toList()
 
 
 ==========================================
 <R,A> R collect(Collector<? super T,A,R> )
 ===========================================
-collect() is a terminal operation that convert stream into final result by accmulating its elements into a container.
+collect() is a terminal operation that convert stream into final result by
+accmulating its elements into a container.
 
 
 Streams are lazy and do not stroe the data
@@ -231,7 +248,8 @@ T -> type of elemnets in stream.
 A -> mutable accululation type (Intermediate container)
 R -> Final result type retunred.
 
-Accumulation = the process of gradually building the result step by step while iterating through the streams elements.
+Accumulation = the process of gradually building the result step by step while iterating
+through the streams elements.
 
 Create a Container A
 Add elements one by one into it
@@ -244,7 +262,8 @@ Accumlator
 Combiner
 Finisher
 
-List<Integer> result = stream.collect(
+List<Integer> result = stream.collect
+(
     ArrayList::new,      // supplier
     List::add,           // accumulator
     List::addAll         // combiner
