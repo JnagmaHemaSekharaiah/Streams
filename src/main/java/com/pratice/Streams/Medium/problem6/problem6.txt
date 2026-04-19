@@ -1,0 +1,7 @@
+Count Elements After Filtering
+
+Problem:
+Count how many numbers are greater than 10
+
+Input: [5, 12, 18, 3, 20]
+Output: 3

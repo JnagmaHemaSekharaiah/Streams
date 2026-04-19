@@ -1,0 +1,11 @@
+IntStream is specialized stream for primitive int values in  java
+
+java.util.stream.IntStream
+
+norammaly 'Stream<Interger>' uses the objects this causes boxing / unboxing overhead.
+
+int ↔ Integer (performance cost)
+
+InStream avoids that works directly on the prmitive int -> faster & efficient
+
+

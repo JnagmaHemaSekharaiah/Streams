@@ -219,7 +219,7 @@ Terminal operation (return result)
 forEach(Consumer<? super T> action)
 collect()
 count()
-findFirst()
+findFirst() findAny()
 reduce()
 toList()
 
