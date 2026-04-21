@@ -1,0 +1,9 @@
+Problem 1: Group strings by length and store uppercase
+
+List<String> list = List.of("java", "go", "python", "js");
+
+{
+ 2=[GO, JS],
+ 4=[JAVA],
+ 6=[PYTHON]
+}
