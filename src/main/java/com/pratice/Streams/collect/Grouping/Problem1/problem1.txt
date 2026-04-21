@@ -1,0 +1,10 @@
+Group Strings by Length
+
+Problem
+Input:
+
+["java", "go", "python", "js"]
+
+Output
+
+{2=[go, js], 4=[java], 6=[python]}

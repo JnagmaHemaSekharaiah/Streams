@@ -12,5 +12,7 @@ public class Demo
         Map<Integer,List<String>> result =
                 list.stream().collect(Collectors.groupingBy(x->x.length()));
 
+
+
     }
 }

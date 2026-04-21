@@ -97,6 +97,23 @@ Combined::
 groupingBy(classifier, mapSupplier, downstream)
 
 
+------------------
+Collectors.mapping()
+----------------------
+is a downstream collector adapter.It lets you transform elements
+before collecting them, usually inside groupingBy
+
+-> groupingBy → groups elements
+-> mapping → transforms elements inside each group
+
+Collectors.mapping(x -> x.toUpperCase(), Collectors.toList())
+
+Take each element → convert to uppercase → collect into List
+
+
+
+
+-------------------------------------------------------------------------------------------------
 
 
 ==========================================

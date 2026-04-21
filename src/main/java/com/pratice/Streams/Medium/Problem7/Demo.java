@@ -1,5 +1,8 @@
 package com.pratice.Streams.Medium.Problem7;
 
+import java.util.List;
+import java.util.Map;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class Demo
@@ -10,7 +13,9 @@ public class Demo
 
         Stream<Integer> stream = Stream.of(4, 5, 4, 6, 7, 5);
 
-        stream
+
+//        Map<Integer, List<String>> result =
+//                list.stream().collect(Collectors.groupingBy(x->x.length()));
 
     }
 
