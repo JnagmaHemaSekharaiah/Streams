@@ -2,6 +2,103 @@ Syntax : collect(Collectors.groupingBy(classifier))
 
 classifier → function that decides the group key
 
+Collectors.groupingBy(...) expects functions that control three things:
+
+1.How to derive the key (classifier)
+2.What Map implementation to use (optional)
+3.How to aggregate values per key (downstream collector)
+
+-------------------
+Classifier Function
+--------------------
+Function<? super T, ? extends K>
+
+Takes stream element and return key
+
+groupingBy(x -> x.length())          // key = length
+groupingBy(x -> x % 2 == 0)          // key = true/false
+groupingBy(s -> s.charAt(0))         // key = first character
+groupingBy(emp -> emp.getDept())     // key = department
+
+
+This is mandatory — without this, grouping is impossible.
+
+------------------------------
+✅ 2. Map Supplier (OPTIONAL)
+------------------------------
+Supplier<M extends Map<K, D>>
+
+Defines which Map implementation to use
+
+Examples :
+----------
+groupingBy(x -> x.length(), HashMap::new)
+groupingBy(x -> x.length(), TreeMap::new)
+groupingBy(x -> x.length(), LinkedHashMap::new)
+
+✔ Use cases:
+
+TreeMap → sorted keys
+LinkedHashMap → insertion order
+HashMap → default (fast)
+
+--------------------------------------
+✅ 3. Downstream Collector (OPTIONAL)
+--------------------------------------
+Defines what happens to values inside each group
+
+Signature:
+Collector<? super T, A, D>
+
+Common Down Stream Options::
+--------------------------
+1.Default (if not provided)
+---------------------------
+Map<K, List<T>>
+
+-----------
+2. Counting
+------------
+groupingBy(x -> x.length(), Collectors.counting())
+
+Output: Map<K, Long>
+
+------
+3.min
+-------
+groupingBy(
+    x -> x.length(),
+    Collectors.maxBy(Comparator.naturalOrder())
+)
+
+---------------------
+4.Set instead of List
+----------------------
+groupingBy(x -> x.length(), Collectors.toSet())
+
+----------
+5.Summing
+----------
+groupingBy(x -> x.length(), Collectors.summingInt(x -> x))
+
+
+---------
+6.Mapping
+---------
+groupingBy
+(
+    emp -> emp.getDept(),
+    Collectors.mapping(emp -> emp.getName(), Collectors.toList())
+)
+
+
+
+Combined::
+groupingBy(classifier, mapSupplier, downstream)
+
+
+
+
 ==========================================
 <R,A> R collect(Collector<? super T,A,R> )
 ===========================================
