@@ -1,0 +1,11 @@
+
+Group by first character → store word lengths
+
+Input ::
+
+List<String> list = List.of("apple", "ant", "bat", "ball");
+
+
+Output ::
+
+{a=[5, 3], b=[3, 4]};
