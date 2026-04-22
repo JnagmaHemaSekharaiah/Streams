@@ -1,0 +1,68 @@
+Min heap is a specialized binary tree based data strcture that
+satisfies the heap property:
+
+Core Characteristics :
+It is a complete binary tree (filled level by level, left to right).
+The root always contains the minimum element.
+Efficient for repeatedly accessing/removing the smallest value.
+
+Example::
+
+        2
+      /   \
+     5     8
+    / \   /
+   10 12 15
+
+   Here:
+   2 is the smallest → always at root
+   Each parent ≤ children → heap property maintained
+
+   In Java
+
+   PriorityQueue<Integer> minHeap = new PriorityQueue<>();
+
+insertion
+----------
+add(E e)
+
+---------------
+Removal methods
+---------------
+poll()
+
+-> remove and return top (smallest in min heap)
+-> Returns null if empty
+
+remove()
+-----------
+Removes and returns top element
+Throws exception if empty
+
+remove(Object o)
+-----------------
+Removes specific element (not efficient: O(n))
+
+---------------------
+Access (Peek) Methods
+---------------------
+peek()
+--------
+Returns top element without removing
+Returns null if empty
+
+element()
+---------
+Same as peek but throws exception if empty
+
+----------------------
+Size & Utility Methods
+-----------------------
+size()
+Returns number of elements
+isEmpty()
+Checks if heap is empty
+clear()
+Removes all elements
+contains(Object o)
+Checks presence (O(n))
