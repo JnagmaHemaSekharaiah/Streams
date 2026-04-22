@@ -1,0 +1,7 @@
+Group by even/odd → sum of squares
+
+Input
+List<Integer> list = List.of(1, 2, 3, 4);
+
+Output
+{false=10, true=20}

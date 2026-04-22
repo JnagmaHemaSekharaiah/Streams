@@ -1,0 +1,21 @@
+Find Highest Salary Employee per Department
+
+Problem:
+Return the highest paid employee in each department.
+
+Input:
+Employee(id, name, department, salary)
+
+[
+ (1, "A", "IT", 5000),
+ (2, "B", "IT", 7000),
+ (3, "C", "HR", 4000),
+ (4, "D", "HR", 6000)
+]
+
+Output:
+
+{
+ IT = B,
+ HR = D
+}
