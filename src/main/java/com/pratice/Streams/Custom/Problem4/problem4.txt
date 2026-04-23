@@ -1,0 +1,20 @@
+Find Average Salary per Department
+
+Problem:
+Calculate average salary for each department.
+
+Input:
+
+[
+ (1, "A", "IT", 5000),
+ (2, "B", "IT", 7000),
+ (3, "C", "HR", 4000),
+ (4, "D", "HR", 6000)
+]
+
+Output:
+
+{
+ IT = 6000,
+ HR = 5000
+}
