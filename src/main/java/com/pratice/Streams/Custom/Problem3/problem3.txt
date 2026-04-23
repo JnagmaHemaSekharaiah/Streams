@@ -1,0 +1,20 @@
+Sort Employees by Salary (Descending)
+
+Problem:
+Return employees sorted by salary in descending order.
+
+Input:
+
+[
+ (1, "A", 4000),
+ (2, "B", 6000),
+ (3, "C", 5000)
+]
+
+Output:
+
+[
+ (2, "B", 6000),
+ (3, "C", 5000),
+ (1, "A", 4000)
+]
