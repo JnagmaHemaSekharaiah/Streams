@@ -4,8 +4,8 @@ import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class Employee
-{
+public class Employee {
+
     private int id;
     private String name;
     private String department;
@@ -27,14 +27,14 @@ public class Employee
                         new Employee(5, "E", "Sales")
                 );
 
-       Map<String,List<String>> map=  employeeList.stream().collect(
+        Map<String,List<String>> map=  employeeList.stream().collect(
                 Collectors.groupingBy(x->x.department
                         ,Collectors.mapping(x->x.name,Collectors.toList())
-           ));
+                ));
 
         System.out.println(map);
 
 
-      }
-
     }
+
+}

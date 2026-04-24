@@ -1,0 +1,39 @@
+
+==========================
+2️⃣ Intermediate Operations
+==========================
+👉 Lazy | Return Stream
+🔹 Transformation
+
+map(Function)
+flatMap(Function)
+mapToInt(ToIntFunction)
+mapToLong(ToLongFunction)
+mapToDouble(ToDoubleFunction)
+
+--------------
+🔹 Filtering
+--------------
+filter(Predicate)
+distinct()
+
+------------
+🔹 Sorting
+------------
+sorted()
+sorted(Comparator)
+
+----------------------
+🔹 Limiting / Slicing
+-----------------------
+limit(long)
+skip(long)
+takeWhile(Predicate) (Java 9+)
+dropWhile(Predicate) (Java 9+)
+
+--------------------------
+🔹 Debugging / Observation
+---------------------------
+peek(Consumer)
+
+

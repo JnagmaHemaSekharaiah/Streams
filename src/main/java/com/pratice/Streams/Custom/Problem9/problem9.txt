@@ -1,0 +1,21 @@
+Group Employees by Department then Count Names Starting with 'A'
+
+Problem:
+For each department, count employees whose name starts with 'A'.
+
+Input:
+
+[
+ (1, "Anil", "IT"),
+ (2, "Aman", "IT"),
+ (3, "Bob", "IT"),
+ (4, "Ajay", "HR"),
+ (5, "David", "HR")
+]
+
+Output:
+
+{
+ IT = 2,
+ HR = 1
+}

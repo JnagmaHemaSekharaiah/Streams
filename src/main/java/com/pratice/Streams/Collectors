@@ -49,7 +49,7 @@ is a downstream collector used inside another collector (like groupingBy/partiti
 
 Syntax:
 --------
-Collectors.mapping(mapperFunction, downstreamCollector);
+Collector.groupBy( * ,Collectors.mapping(mapperFunction, downstreamCollector));
 
 original objects → transform → collect
 

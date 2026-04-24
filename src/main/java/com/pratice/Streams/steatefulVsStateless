@@ -1,0 +1,58 @@
+-----------------------------
+Stateless (easy, independent)
+-----------------------------
+Each element is processed alone:
+
+stream.map(x -> x * 2)
+stream.filter(x -> x > 10)
+
+✔ No memory of past elements
+
+
+---------------------------------
+Stateful intermediate operations
+----------------------------------
+These operations depend on the whole stream or previously processed elements.
+
+sorted()
+---------
+list.stream().sorted()
+
+👉 Why stateful?
+
+It must see all elements first
+Then sort them
+
+distinct()
+-----------
+list.stream().distinct()
+
+👉 Why stateful?
+
+It must remember what elements were already seen
+Uses internal memory (like a Set)
+
+Skip()
+-------
+skip() is a stateful intermediate operation in Java Streams that ignores the
+first n elements and passes the rest downstream.
+
+
+
+
+1. Performance impact
+-----------------------
+Stateful operations may need:
+extra memory
+multiple passes
+Not as efficient as stateless ones
+
+
+
+
+
+
+
+
+
+
