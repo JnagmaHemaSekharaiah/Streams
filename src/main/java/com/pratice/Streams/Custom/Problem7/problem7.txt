@@ -1,0 +1,19 @@
+Group Employees by Department and Collect Only Names
+
+Problem:
+Group by department but store only names.
+
+Input:
+
+[
+ (1, "A", "IT"),
+ (2, "B", "IT"),
+ (3, "C", "HR")
+]
+
+Output:
+
+{
+ IT = [A, B],
+ HR = [C]
+}
