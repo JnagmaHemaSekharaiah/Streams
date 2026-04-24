@@ -1,0 +1,83 @@
+=========
+Collectors
+===========
+<R,A> R collect(Collectors <?super T,A,R> action)
+
+T -> type of elemnets in stream.
+A -> mutable accululation type (Intermediate container)
+R -> Final result type retunred.
+
+Accumulation = the process of gradually building the result step by step while iterating
+through the streams elements.
+
+Create a Container A
+Add elements one by one into it
+convert into final result (R)
+
+A Collector has the 4 parts
+
+Supplier
+Accumlator
+Combiner
+Finisher
+
+List<Integer> result = stream.collect
+(
+    ArrayList::new,      // supplier
+    List::add,           // accumulator
+    List::addAll         // combiner
+);
+
+
+List<Integer> list = stream.collect(Collectors.toList());
+
+Set<Integer> set = stream.collect(Collectors.toSet());
+
+Map<Integer, String> map = stream.collect(  Collectors.toMap(x -> x, x -> "Value" + x) );
+
+String result = stream.collect(Collectors.joining(", "));
+
+long count = stream.collect(Collectors.counting());
+
+Map<Integer, List<Integer>> grouped = stream.collect(Collectors.groupingBy(x -> x % 2));
+
+
+-------------------
+Collectors.mapping()
+--------------------
+is a downstream collector used inside another collector (like groupingBy/partitioningBy)
+
+Syntax:
+--------
+Collectors.mapping(mapperFunction, downstreamCollector);
+
+original objects → transform → collect
+
+mapper     ->  how to transform each element
+downstream ->  how to collect the transformed values
+
+Collectors.mapping(Employee::getName, Collectors.toList()) // only names
+Collectors.mapping(Employee::getName, Collectors.toSet()) // Unique names
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

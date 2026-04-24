@@ -1,0 +1,17 @@
+Find Second Highest Salary Employee
+
+Problem:
+Find the employee with the second highest salary.
+
+Input:
+
+[
+ (1, "A", 4000),
+ (2, "B", 7000),
+ (3, "C", 6000),
+ (4, "D", 5000)
+]
+
+Output:
+
+C
