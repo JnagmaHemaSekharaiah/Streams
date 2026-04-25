@@ -1,0 +1,5 @@
+Problem 1: Flatten a List of Lists
+Input:
+[[1,2], [3,4], [5]]
+Output:
+[1,2,3,4,5]

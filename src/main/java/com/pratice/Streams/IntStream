@@ -9,3 +9,27 @@ int ↔ Integer (performance cost)
 InStream avoids that works directly on the prmitive int -> faster & efficient
 
 
+-> It specialized sptream for primitive int values
+
+range()
+rangeClosed()
+
+
+Intermediate operations (return stream)
+------------------------------------------
+map(), filter(), sorted(), distinct(), limit()
+
+Terminal operations (produce result)
+--------------------------------------
+sum()   count()        min()
+max()   average()      forEach()
+
+Boxing / Unboxing
+-------------------
+Convert primitve int to Object
+
+IntStream       →  primitive stream (fast)
+Stream<Integer> →  boxed (slower)
+
+
+
