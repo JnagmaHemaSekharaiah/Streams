@@ -1,7 +1,9 @@
 package com.pratice.Streams.Basic.IntermediateOp.flatmap.problem2;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class Demo {
 
@@ -9,13 +11,12 @@ public class Demo {
     {
 
 
-     List<List<String>> list = new ArrayList<>(List.of(List.of("Hello World")
-             ,List.of("Java Streams")));
+     List<String> list = List.of("Hello World", "Java Streams");
 
 
-
-
-       List<String> list1=  list.stream().flatMap(x->x.stream().filter(u->u.charAt(0)=='H')).toList();
+       List<String> list1=  list.stream().
+               flatMap(x-> Arrays.stream(x.split(" ")))
+               .collect(Collectors.toList());
 
         System.out.println(list1);
 

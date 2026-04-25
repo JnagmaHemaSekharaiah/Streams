@@ -37,3 +37,29 @@ dropWhile(Predicate) (Java 9+)
 peek(Consumer)
 
 
+flatMap
+--------
+flatmap() is used to convert each element into stream and then flatten (merge) all those
+stream into single stream
+
+Use it when
+-----------
+You have nested collections
+One element → multiple elements
+You want flattened output
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
