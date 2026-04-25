@@ -1,0 +1,7 @@
+Problem 2: Split Sentences into Words
+
+Input:
+["Hello World", "Java Streams"]
+
+Output:
+["Hello", "World", "Java", "Streams"]

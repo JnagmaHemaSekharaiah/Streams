@@ -1,0 +1,11 @@
+Employees → Skills
+
+Input:
+Employee
+{
+  name: "A",
+  skills: ["Java", "SQL"]
+}
+
+Output:
+["Java", "SQL", ...]
