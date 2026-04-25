@@ -1,17 +1,27 @@
 package collections.slidingWindow.problem3;
 
+import java.sql.Array;
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
+
 public class Demo
 {
 
-    private static void fun() {
-    }
+
 
     public static void main(String[] args) {
 
-        int nums[] ={1,2,3,1};
-    // 999
+       List<List<String>>  list = Arrays.asList(List.of("Hello World")
+       ,List.of("Java Streams"));
 
-        Demo.fun();
+       List<String> list1=   list.stream()
+               .flatMap(x->x.stream())
+               .flatMap(s-> Arrays.stream(s.split(" ")))
+               .collect(Collectors.toList());
+
+        System.out.println(list1);
+
     }
 
 

@@ -1,0 +1,5 @@
+List<List<String>> list =
+Arrays.asList(List.of("Hello World") ,List.of("Java Streams"));
+
+
+ Output should ["Hello", "World", "Java", "Streams"]
