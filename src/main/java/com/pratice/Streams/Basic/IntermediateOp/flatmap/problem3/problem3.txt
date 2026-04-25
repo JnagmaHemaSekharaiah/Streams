@@ -1,0 +1,7 @@
+Unique Characters from Words
+
+Input:
+["abc", "de", "fa"]
+
+Output:
+[a, b, c, d, e, f]
