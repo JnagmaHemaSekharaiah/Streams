@@ -1,0 +1,25 @@
+Problem 1: Find Duplicate Elements
+
+  List<Integer> list = Arrays.asList(1, 2, 3, 2, 4, 2, 5);
+
+
+int count =Collectors.frequency(Collection<> c,obj e);
+
+c -> list
+e ->element to count
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

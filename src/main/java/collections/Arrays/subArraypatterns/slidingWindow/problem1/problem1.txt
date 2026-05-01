@@ -1,0 +1,10 @@
+Problem: Maximum Number of Vowels in a Substring of Length K
+
+Input:
+s = "abciiidef", k = 3
+
+Output:
+3
+
+Explanation:
+Substring "iii" contains 3 vowels, which is the maximum.

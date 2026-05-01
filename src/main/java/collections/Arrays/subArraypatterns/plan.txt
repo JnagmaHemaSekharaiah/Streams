@@ -1,0 +1,94 @@
+Phase 1: Fixed Window (foundation)
+--------------------------------------
+Goal: learn sliding window mechanics
+
+1.Max sum of subarray of size k
+
+👉 learn add/remove window
+
+2.Average of subarray of size k
+
+3.Maximum number of vowels in substring of size k
+
+4.Count subarrays of size k with sum ≥ target
+
+Phase 2: Prefix Sum Basics
+------------------------
+
+Goal: understand range sum queries
+
+5.Build prefix sum array + answer queries (L, R)
+
+6.Find sum of all subarrays (conceptual)
+
+7.Range Sum Query (immutable array)
+
+Phase 3: Prefix + HashMap (MOST IMPORTANT 🔥)
+
+Goal: solve sum = k type problems
+
+8.Count subarrays with sum = k
+
+9.Longest subarray with sum = k
+
+10.Subarray sum divisible by k
+
+11.Count subarrays with equal 0s and 1s
+
+12.Binary array → longest subarray with equal 0s & 1s
+
+Phase 4: Variable Sliding Window
+-------------------------------------
+Goal: dynamic window (expand/shrink)
+
+13.Smallest subarray with sum ≥ k
+
+14.Longest substring without repeating characters
+
+15.Longest subarray with at most k distinct elements
+
+Phase 5: Kadane’s Pattern
+
+Goal: max/min optimization
+
+16.Maximum subarray sum (Kadane)
+
+17.Maximum product subarray
+
+Phase 6: Advanced Patterns (combine concepts)
+-----------------------------------------------
+
+Goal: real interview-level thinking
+
+18.Maximum sum of subarray with size k (distinct elements constraint)
+
+19.Shortest subarray with sum ≥ k (hard – prefix + deque)
+
+20.Count number of nice subarrays (exactly k odd numbers)
+
+How to use this roadmap (important)
+--------------------------------------
+Don’t just solve — follow this process:
+
+For each problem:
+
+Identify pattern (before coding)
+Write brute force
+Optimize using correct technique
+Dry run with example
+Weekly plan (efficient)
+Day 1–2 → Phase 1
+Day 3 → Phase 2
+Day 4–5 → Phase 3 (very important)
+Day 6 → Phase 4
+Day 7 → Phase 5 + 6
+Pattern recognition shortcut (gold rule)
+
+When you see a problem:
+
+Clue in question	 Use
+“size k”	        Sliding window
+“sum = k”	        Prefix + HashMap
+“longest/shortest”	Variable window
+“max sum”       	Kadane
+“count subarrays”	Prefix + HashMap

@@ -1,0 +1,94 @@
+
+
+Fixed sized window (k)
+----------------------
+“max sum of subarray of size k”
+
+sliding window
+
+
+Variable size window
+--------------------
+“longest subarray with sum ≤ k”
+“smallest subarray with sum ≥ k”
+
+Two pointers / dynamic window
+
+
+Sum-based (exact condition)
+----------------------------
+“subarray sum = k”
+“count subarrays with sum k”
+
+Prefix sum + HashMap
+
+
+Product / no negatives
+------------------------
+subarray product < k”
+Sliding window
+
+Maximum / Minimum subarray
+--------------------------
+Kadane’s Algorithm
+
+
+====================================================
+
+Step 1: Fixed window
+
+Start simple:
+
+Max sum of size k
+Average of size k
+
+👉 Learn:
+
+Add next element
+Remove previous element
+
+
+Step 2: Prefix sum basics
+Build prefix array
+Range sum queries
+
+👉 Learn:
+
+sum(i,j) = prefix[j+1] - prefix[i]
+
+
+
+Step 3: Prefix + HashMap (VERY IMPORTANT)
+
+This is where most interview problems come from.
+
+Problems:
+
+Count subarrays with sum k
+Longest subarray with sum k
+
+👉 Core idea:
+
+If (prefixSum - k) exists → we found a subarray
+
+
+Step 4: Variable sliding window
+Longest substring without repeating chars
+Smallest subarray ≥ k
+👉 Learn:
+Expand → shrink → expand → shrink
+
+
+Step 5: Kadane’s Algorithm
+Maximum subarray sum
+
+👉 Core idea:
+
+If sum < 0 → reset
+
+
+
+
+
+
+

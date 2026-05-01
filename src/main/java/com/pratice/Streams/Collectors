@@ -59,9 +59,18 @@ downstream ->  how to collect the transformed values
 Collectors.mapping(Employee::getName, Collectors.toList()) // only names
 Collectors.mapping(Employee::getName, Collectors.toSet()) // Unique names
 
+-----------------------
+Collectors.filtering()
+-----------------------
+Used Java 9
 
+->It allows you to apply a filter inside a collector pipeline, typically
+  within groupingBy or partitioningBy.
 
+Syntax:: Collectors.filtering(predicate,downstreamCollector)
 
+predicate           →  condition to filter elements
+downstreamCollector →  how to collect the filtered elements
 
 
 
