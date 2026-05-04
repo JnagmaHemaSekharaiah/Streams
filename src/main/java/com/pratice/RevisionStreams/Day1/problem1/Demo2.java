@@ -15,6 +15,8 @@ public class Demo2
                        .filter( x->!set.add(x))
                        .collect(Collectors.toSet());
 
+        a.forEach(x-> System.out.println(x));
+
 //        Set<Integer> seen = new HashSet<>();
 //        List<Integer> list = Arrays.asList(1,1,2);
 //

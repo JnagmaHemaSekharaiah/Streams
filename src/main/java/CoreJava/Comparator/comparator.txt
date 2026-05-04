@@ -17,9 +17,9 @@ interface Comparator<T>
 }
 
 How it works:
-Returns negative → o1 comes before o2
+Returns negative → o1 comes before o2 {o1  o2}
 Returns 0 → equal
-Returns positive → o1 comes after o2
+Returns positive → o1 comes after o2 { o2  o1}
 
 
 
@@ -76,32 +76,6 @@ Comparator.comparing(...)
 Integer.compare(a, b)
 
 
-============================================
-Comparator<Student> comp = (a,b) -> {
-  Integer key1 = a.marks;
-  Integer key2 = b.marks;
-  return key1.compareTo(k2);
-}
-
-list.sort(comp)
-Internall it does
-
-compare(a,b)
-compare(b,c)
-compare(a,c)
-........
-
-
-key1.compareTo(k2)
-
-
-Integer.compareTo()
-
-Condition	Return    Value
-key1 < key2	negative  (-1)
-key1 == key2	       0
-key1 > key2	positive  (+1)
-
 ==============================================
 
 Custom Comparator
@@ -121,7 +95,8 @@ zero     → a == b
 positive → a > b
 
 
-
+-ve no swapping
++ve swapping
 
 
 

@@ -1,3 +1,10 @@
 Problem 2: Sort Strings by Length
 
 Input: ["java", "go", "python", "js"]
+
+Comparator<String> comp = ()->
+
+
+
+
+

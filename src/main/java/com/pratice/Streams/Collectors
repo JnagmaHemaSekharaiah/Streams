@@ -7,8 +7,8 @@ T -> type of elemnets in stream.
 A -> mutable accululation type (Intermediate container)
 R -> Final result type retunred.
 
-Accumulation = the process of gradually building the result step by step while iterating
-through the streams elements.
+Accumulation = the process of gradually building the result step by step
+while iterating through the streams elements.
 
 Create a Container A
 Add elements one by one into it
@@ -16,10 +16,7 @@ convert into final result (R)
 
 A Collector has the 4 parts
 
-Supplier
-Accumlator
-Combiner
-Finisher
+1.Supplier 2.Accumlator  3.Combiner  4.Finisher
 
 List<Integer> result = stream.collect
 (

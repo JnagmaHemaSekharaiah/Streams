@@ -1,0 +1,17 @@
+Get Names of Employees with Salary > 5000
+
+Problem:
+Filter employees with salary > 5000 and return their names.
+
+Input:
+
+[
+ (1, "A", 4000),
+ (2, "B", 6000),
+ (3, "C", 8000),
+ (4, "D", 3000)
+]
+
+Output:
+
+[B, C]
